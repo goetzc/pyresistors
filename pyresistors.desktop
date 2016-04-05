@@ -1,0 +1,11 @@
+[Desktop Entry]
+Version=1.0
+Name=pyresistors
+GenericName=Resistor calculator
+Comment=Calculate resistors value and tolerance by their color codes.
+Categories=Qt;Utility;X-KDE-Utilities-Desktop;
+Exec=pyresistors
+Terminal=false
+Type=Application
+Icon=pyresistors
+StartupNotify=true
