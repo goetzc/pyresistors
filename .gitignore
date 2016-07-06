@@ -1,0 +1,8 @@
+__pycache__/
+*.pyc
+*.py.c
+*.so
+*.zip
+*.tar.gz
+*.kdev4
+*.sublime-*
