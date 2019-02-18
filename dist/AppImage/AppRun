@@ -1,0 +1,18 @@
+#!/bin/sh
+ARCH=$(uname -m)
+SELF_DIR="$(dirname "$(readlink -f "$0")")"
+LD_LIBRARY_PATH_="$SELF_DIR/usr/lib:$SELF_DIR/usr/lib/$ARCH-linux-gnu:$SELF_DIR/lib/$ARCH-linux-gnu"
+
+if [ -z "$LD_LIBRARY_PATH" ]; then
+  export LD_LIBRARY_PATH="$LD_LIBRARY_PATH_"
+else
+  export LD_LIBRARY_PATH="$LD_LIBRARY_PATH_:$LD_LIBRARY_PATH"
+fi
+
+export QT_QPA_PLATFORM_PLUGIN_PATH="$SELF_DIR/usr/lib/qt5/plugins"
+
+export PYTHONPATH="$SELF_DIR/usr/lib/python3.6:$SELF_DIR/usr/lib/python3.6/lib-dynload:$SELF_DIR/usr/lib/python3/dist-packages"
+
+export PATH="$SELF_DIR/usr/bin:$PATH"
+
+exec python3 "$SELF_DIR/usr/share/pyresistors/pyresistors.py"
