@@ -3,6 +3,7 @@
 *.kdev4
 *.py.c
 *.pyc
+*.snap
 *.so
 *.sublime-*
 *.tar.gz
